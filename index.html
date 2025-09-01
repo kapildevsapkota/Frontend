@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="announcement-bar" class="announcement-bar">
+        <div class="announcement-content">
+            <span>This is a global announcement!</span>
+            <button id="close-announcement" class="close-btn" aria-label="Close announcement">×</button>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-header" id="nav-header">
+                <div class="nav-logo" id="nav-logo">
+                    <span class="logo">
+                        <img src="/images/logo.png" alt="">
+                    </span>
+                </div>
+                <div class="mobile-submenu-header-inline" id="mobile-submenu-header-inline" style="display: none;">
+                    <button class="mobile-back-btn" data-back="main">←</button>
+                    <h3 id="submenu-title">Submenu Title</h3>
+                    
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item has-megamenu">
+                    <a href="#" class="nav-link" data-menu="mealtime">Mealtime</a>
+                    <div class="megamenu" id="megamenu-mealtime">
+                        <div class="megamenu-content">
+                            <div class="megamenu-section">
+                                <h3>Shop Mealtime</h3>
+                                <ul class="submenu-list">
+                                    <li><a href="#">High Chair</a></li>
+                                    <li><a href="#">Booster</a></li>
+                                    <li><a href="#">Tableware & Bibs</a></li>
+                                    <li><a href="#">Mealtime Accessories</a></li>
+                                    <li><a href="#">Bundle & Save</a></li>
+                                    <li><a href="#" class="view-all">All Mealtime</a></li>
+                                </ul>
+                            </div>
+                            <div class="megamenu-products">
+                                <div class="products-header">
+                                    <h3>Featured Mealtime</h3>
+                                    <div class="carousel-controls">
+                                        <button class="carousel-btn prev" data-carousel="mealtime">‹</button>
+                                        <button class="carousel-btn next" data-carousel="mealtime">›</button>
+                                    </div>
+                                </div>
+                                <div class="product-carousel" data-carousel="mealtime">
+                                    <div class="product-track">
+                                        <div class="product-card">
+                                            <img src="/images/chair.png" alt="The Chair">
+                                            <div class="pro-text">BEST SELLER</div>
+                                            <div class="pro-name">The Chair</div>
+                                        </div>
+                                        <div class="product-card">
+                                            <img src="/images/bite.png" alt="First Bites Full Kit">
+                                            <div class="pro-text">BEST SELLER</div>
+                                            <div class="pro-name">First Bites Full Kit</div>
+                                        </div>
+                                        <div class="product-card">
+                                            <div class="pro-text">BEST SELLER</div>
+                                            <img src="/images/plate.png" alt="Suction Plate">           
+                                            <div class="pro-name">Suction Plate</div>   
+                                        </div>
+                                        <div class="    product-card">
+                                            <img src="/images/littlecup.png" alt="Little Cup">
+                                            <h4 class="pro-name">Little Cup</h4>
+                                        </div>
+                                        <div class="product-card">
+                                            <img src="/images/spoon.png" alt="Feeding Bib">
+                                            <h4 class="pro-name">Feeding Bib</h4>
+                                        </div>
+                                        <div class="product-card">
+                                            <img src="/images/bowl.png" alt="First Utensils">
+                                            <h4 class="pro-name">First Utensils</h4> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            
+                <li class="nav-item has-megamenu">
+                    <a href="#" class="nav-link" data-menu="playtime">Playtime</a>
+                    <div class="megamenu" id="megamenu-playtime">
+                        <div class="megamenu-content">
+                            <div class="megamenu-section">
+                                <h3>Shop Playtime</h3>
+                                <ul class="submenu-list">
+                                    <li><a href="#">Toys & Games</a></li>
+                                    <li><a href="#">Educational Toys</a></li>
+                                    <li><a href="#">Outdoor Play</a></li>
+                                    <li><a href="#" class="view-all">All Playtime</a></li>
+                                </ul>
+                            </div>
+                            <div class="megamenu-products">
+                                <div class="products-header">
+                                    <h3>Featured Playtime</h3>
+                                    <div class="carousel-controls">
+                                        <button class="carousel-btn prev" data-carousel="playtime">‹</button>
+                                        <button class="carousel-btn next" data-carousel="playtime">›</button>
+                                    </div>
+                                </div>
+                                <div class="product-carousel" data-carousel="playtime">
+                                    <div class="product-track">
+                                        <div class="product-card">
+                                            <img src="/images/spoon.png" alt="Building Blocks">
+                                            <h4>Building Blocks</h4>
+                                        </div>
+                                        <div class="product-card">
+                                            <div class="product-badge">BEST SELLER</div>
+                                            <img src="/images/bite.png" alt="Learning Puzzle">
+                                            <h4>Learning Puzzle</h4>
+                                        </div>
+                                        <div class="product-card">
+                                            <img src="/images/bowl.png" alt="Push Car">
+                                            <h4>Push Car</h4>
+                                        </div>
+                                        <div class="product-card">
+                                            <img src="/images/chair.png" alt="Soft Bear">
+                                            <h4>Soft Bear</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+        
+                <li class="nav-item has-megamenu">
+                    <a href="#" class="nav-link" data-menu="bathtime">Bathtime</a>
+                    <div class="megamenu" id="megamenu-bathtime">
+                        <div class="megamenu-content">
+                            <div class="megamenu-section">
+                                <h3>Shop Bathtime</h3>
+                                <ul class="submenu-list">
+                                    <li><a href="#">Bath Tubs</a></li>
+                                    <li><a href="#">Bath Toys</a></li>
+                                    <li><a href="#">Towels & Washcloths</a></li>
+                                    <li><a href="#">Bath Accessories</a></li>
+                                    <li><a href="#">Shampoo & Soap</a></li>
+                                    <li><a href="#">Bath Safety</a></li>
+                                    <li><a href="#">Bundle & Save</a></li>
+                                    <li><a href="#" class="view-all">All Bathtime</a></li>
+                                </ul>
+                            </div>
+                            <div class="megamenu-products">
+                                <div class="products-header">
+                                    <h3>Featured Bathtime</h3>
+                                    <div class="carousel-controls">
+                                        <button class="carousel-btn prev" data-carousel="bathtime">‹</button>
+                                        <button class="carousel-btn next" data-carousel="bathtime">›</button>
+                                    </div>
+                                </div>
+                                <div class="product-carousel" data-carousel="bathtime">
+                                    <div class="product-track">
+                                        <div class="product-card">
+                                            <div class="product-badge">BEST SELLER</div>
+                                            <img src="/images/bowl.png" alt="Baby Bath">
+                                            <h4>Baby Bath</h4>
+                                        </div>
+                                        <div class="product-card">
+                                            <img src="/images/spoon.png" alt="Bath Toy Set">
+                                            <h4>Bath Toy Set</h4>
+                                        </div>
+                                        <div class="product-card">
+                                            <img src="/images/plate.png" alt="Hooded Towel">
+                                            <h4>Hooded Towel</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item has-megamenu">
+                    <a href="#" class="nav-link play-boxes" data-menu="playboxes">
+                        The Play Boxes
+                        <span class="new-badge">New!</span>
+                    </a>
+                    <div class="megamenu" id="megamenu-playboxes">
+                        <div class="megamenu-content">
+                            <div class="megamenu-section">
+                                <h3>Shop Play boxes</h3>
+                                <ul class="submenu-list">
+                                    <li><a href="#">Play Box Subscription<img src="/images/playground.svg" class="playground" alt="Play Box Subscription"></a></li>
+                                    <li><a href="#">Newborn Box</a></li>
+                                    <li><a href="#">Gift Play Boxes</a></li>
+                                    <li><a href="#">Redeem Gift</a></li>
+                                    <li><a href="#" class="view-all">All Play Boxes</a></li>
+                                </ul>
+                            </div>
+                            <div class="megamenu-age-section">
+                                <div class="age-categories">
+                                    <div class="age-header">
+                                        <div class="age-year">Year 1</div>
+                                        <div class="age-year">Year 2</div>
+                                    </div>
+                                    <div class="age-grid">
+                                        <div class="age-item">
+                                            <img src="/images/Box.svg" class="image-items" alt="yellow ">
+                                            <div class="age-text">0-12 weeks</div>
+                                        </div>
+                                        <div class="age-item">
+                                            <img src="/images/Box2.svg" class="image-items" alt="image">
+                                            <div class="age-text">3-4 mos</div>
+                                        </div>
+                                        <div class="age-item">
+                                            <img src="/images/Box3.svg" class="image-items" alt="image">
+                                            <div class="age-text">5-6 mos</div>
+                                        </div>
+                                        <div class="age-item">
+                                            <img src="/images/Box4.svg" class="image-items" alt="image">
+                                            <div class="age-text">7-8 mos</div>
+                                        </div>
+                                        <div class="age-item">
+                                            <img src="/images/Box5.svg" class="image-items" alt="image">    
+                                            <div class="age-text">9-10 mos</div>
+                                        </div>
+                                        <div class="age-item">
+                                            <img src="/images/Box6.svg" class="image-items" alt="image">   
+                                            <div class="age-text">11-12 mos</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="megamenu-gifts-section">
+                                <h3>Play Box Gifts & Subscriptions</h3>
+                                <div class="gifts-content">
+                                    <!-- Gift Item 1 -->
+                                    <div class="gift-card">
+                                        <div class="gift-image">        
+        <img src="/images/bowl.png" alt="Play Box Gifts">
+      </div>
+      <div class="gift-info">
+        <div class="gift-badge">Best Seller</div>
+        <div class="gift-title">First Bites Full Kit</div>
+        <div class="gift-price">$40/month</div>
+      </div>
+    </div>
+
+    <!-- Gift Item 2 -->
+    <div class="gift-card">
+      <div class="gift-image">
+        <img src="/images/bite.png" alt="Play Box Packages"> 
+      </div>
+      <div class="gift-info">
+        <div class="gift-badge">Best Seller</div>
+        <div class="gift-title">First Bites Full Kit</div>
+        <div class="gift-price">$40/month</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link-gift">Gifts</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Best Sellers</a>
+                </li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-main" id="mobile-menu-main">
+            
+            <div class="mobile-bestseller-section">
+                <div class="mobile-bestseller-header">
+                    <h3>Best Seller</h3>
+                    <a href="#" class="shop-all-link">Shop all</a>
+                </div>
+                <div class="mobile-bestseller-carousel">
+                    <div class="mobile-product-track">
+                        <div class="mobile-product-card">
+                            <img src="/images/chair.png" alt="The Chair">
+                            
+                        </div>
+                        <div class="mobile-product-card">
+                            <img src="/images/bite.png" alt="First Bites Full Kit">
+                        </div>
+                        <div class="mobile-product-card">
+                            <img src="/images/plate.png" alt="Suction Plate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="mobile-nav-menu">
+                <li class="mobile-nav-item has-submenu">
+                    <a href="#" class="mobile-nav-link" data-submenu="mealtime">
+                        Mealtime
+                        <span class="mobile-arrow">→</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item has-submenu">
+                    <a href="#" class="mobile-nav-link" data-submenu="playtime">
+                        Playtime
+                        <span class="mobile-arrow">→</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item has-submenu">
+                    <a href="#" class="mobile-nav-link" data-submenu="bathtime">
+                        Bathtime
+                        <span class="mobile-arrow">→</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item has-submenu">
+                    <a href="#" class="mobile-nav-link" data-submenu="playboxes">
+                        The Play Boxes
+                        <span class="mobile-arrow">→</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        Gifts
+                        <span class="mobile-arrow">→</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">
+                        Best Sellers
+                        <span class="mobile-arrow">→</span>
+                    </a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">Shop all</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mobile-submenu" id="mobile-submenu-mealtime">
+           
+            <div class="mobile-submenu-content">
+                <ul class="mobile-submenu-list">
+                    <li><a href="#">High Chair</a></li>
+                    <li><a href="#">Booster</a></li>
+                    <li><a href="#">Tableware & Bibs</a></li>
+                    <li><a href="#">Mealtime Accessories</a></li>
+                    <li><a href="#">Bundle & Save</a></li>
+                    <li><a href="#" class="mobile-view-all">All Mealtime</a></li>
+                </ul>
+                <div class="mobile-featured-section">
+                    <div class="mobile-featured-header">
+                        <h4>Featured Mealtime</h4>
+                        <a href="#" class="shop-all-link">Shop all</a>
+                    </div>
+                    <div class="mobile-featured-carousel">
+                        <div class="mobile-featured-track">
+                            <div class="mobile-featured-card">
+                                
+                                <img src="/images/chair.png" alt="The Chair">
+                              
+                            </div>
+                            <div class="mobile-featured-card">
+                                
+                                <img src="/images/bite.png" alt="First Bites Full Kit">
+                               
+                            </div>
+                            <div class="mobile-featured-card">
+                                
+                                <img src="/images/plate.png" alt="Suction Plate">           
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-submenu" id="mobile-submenu-playtime">
+            
+            <div class="mobile-submenu-content">
+                <ul class="mobile-submenu-list">
+                    <li><a href="#">Toys & Games</a></li>
+                    <li><a href="#">Educational Toys</a></li>
+                    <li><a href="#">Outdoor Play</a></li>
+                    <li><a href="#" class="mobile-view-all">All Playtime</a></li>
+                </ul>
+                <div class="mobile-featured-section">
+                    <div class="mobile-featured-header">
+                        <h4>Featured Playtime</h4>
+                        <a href="#" class="shop-all-link">Shop all</a>
+                    </div>
+                    <div class="mobile-featured-carousel">
+                        <div class="mobile-featured-track">
+                            <div class="mobile-featured-card">
+                                
+                                <img src="/images/chair.png" alt="Building Blocks">
+                                
+                            </div>
+                            <div class="mobile-featured-card">
+                                <img src="/images/bowl.png" alt="Learning Puzzle">
+                                
+                            </div>
+                            <div class="mobile-featured-card">
+                                <img src="/images/bite.png" alt="Push Car">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-submenu" id="mobile-submenu-bathtime">
+            
+            <div class="mobile-submenu-content">
+                <ul class="mobile-submenu-list">
+                    <li><a href="#">Bath Tubs</a></li>
+                    <li><a href="#">Bath Toys</a></li>
+                    <li><a href="#">Towels & Washcloths</a></li>
+                    <li><a href="#">Bath Accessories</a></li>
+                    <li><a href="#">Shampoo & Soap</a></li>
+                    <li><a href="#">Bath Safety</a></li>
+                    <li><a href="#">Bundle & Save</a></li>
+                    <li><a href="#" class="mobile-view-all">All Bathtime</a></li>
+                </ul>
+                <div class="mobile-featured-section">
+                    <div class="mobile-featured-header">
+                        <h4>Featured Bathtime</h4>
+                        <a href="#" class="shop-all-link">Shop all</a>
+                    </div>
+                    <div class="mobile-featured-carousel">
+                        <div class="mobile-featured-track">
+                            <div class="mobile-featured-card">
+                                <div class="mobile-product-badge">BEST SELLER</div>
+                                <img src="/images/bowl.png" alt="Baby Bath">
+                                
+                            </div>
+                            <div class="mobile-featured-card">
+                                <img src="/images/spoon.png" alt="Bath Toy Set">
+                                
+                            </div>
+                            <div class="mobile-featured-card">
+                                <img src="/images/plate.png" alt="Hooded Towel">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-submenu" id="mobile-submenu-playboxes">
+           
+            <div class="mobile-submenu-content">
+                <ul class="mobile-submenu-list">
+                    <li><a href="#">Play Box Subscription <img src="/images/playground.svg" class="playground" alt="Play Box Subscription"></a></li>
+                    <li><a href="#">Newborn Box</a></li>
+                    <li><a href="#">Gift Play Boxes</a></li>
+                    <li><a href="#">Redeem Gift</a></li>
+                    <li><a href="#" class="mobile-view-all">All Play Boxes</a></li>
+                </ul>
+                <div class="mobile-featured-section">
+                    <div class="mobile-featured-header">
+                        <h4>Play Box Gifts & Subscriptions</h4>
+                        <a href="#" class="shop-all-link">Shop all</a>
+                    </div>
+                    <div class="mobile-featured-carousel">
+                        <div class="mobile-featured-track">
+                            <div class="mobile-featured-card">
+                               
+                                <img src="/images/plate.png" alt="First Bites Full Kit">
+                                
+                            </div>
+                            <div class="mobile-featured-card">
+                                
+                                <img src="/images/bite.png" alt="Newborn Box">
+                                
+                            </div>
+                            <div class="mobile-featured-card">
+                                <img src="/images/bowl.png" alt="Gift Play Box">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+                <section class="slider-accordion-section" id="slider-accordion">
+            <div class="slider-accordion-container">
+                <div class="slider-side">
+                    <div class="slider-wrapper">
+                        <!-- Slide 1: Image -->
+                        <div class="slide active" data-slide="0">
+                            <img src="/images/chair.png" alt="Ice cream on toy car" />
+                        </div>
+                        
+                        <!-- Slide 2: Video with user interaction prompt -->
+                        <div class="slide" data-slide="1">
+                            <video preload="auto" loop playsinline>
+                                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <button class="play-btn">▶ Click to Play Video</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3: Video with user interaction prompt -->
+                        <div class="slide" data-slide="2">
+                            <video preload="auto" loop playsinline>
+                                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="video-overlay">
+                                <button class="play-btn">▶ Click to Play Video</button>
+                            </div>
+                        </div>
+                        
+                        
+            
+                        
+                        <!-- Slide 5: Vimeo iframe -->
+                        <div class="slide" data-slide="4">
+                            <iframe src="https://player.vimeo.com/video/76979871?background=1&autoplay=1&muted=0&loop=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-side">
+                    <div class="section-title">
+                        <h2>It's not magic,<br>It's science</h2>
+                    </div>
+                    
+                    <div class="accordion-wrapper">
+                        <div class="accordion-item active" data-accordion="0">
+                            <div class="accordion-header">
+                                <h3>Lorem Ipsum</h3>
+                                <span class="accordion-icon">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum dolor sit amet consectetur. Euismod ultricies sed ipsum duis at arcu sit urna proin. Erat feugiat diam pharetra nisl.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" data-accordion="1">
+                            <div class="accordion-header">
+                                <h3>Lorem Ipsum dolor</h3>
+                                <span class="accordion-icon">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum dolor sit amet consectetur. Euismod ultricies sed ipsum duis at arcu sit urna proin. Erat feugiat diam pharetra nisl.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" data-accordion="2">
+                            <div class="accordion-header">
+                                <h3>Amet consectetur</h3>
+                                <span class="accordion-icon">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum dolor sit amet consectetur. Euismod ultricies sed ipsum duis at arcu sit urna proin. Erat feugiat diam pharetra nisl.</p>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="accordion-item" data-accordion="4">
+                            <div class="accordion-header">
+                                <h3>Euismod ultricies</h3>
+                                <span class="accordion-icon">+</span>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Lorem ipsum dolor sit amet consectetur. Euismod ultricies sed ipsum duis at arcu sit urna proin. Erat feugiat diam pharetra nisl.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="common-footer">
+                        <h4>A friendly reminder</h4>
+                        <p>Alcohol will still probably affect your well-being and your sleep. A healthy breakfast and coffee should have you up and running by mid-morning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="content-section">
+            <h2>Section 3</h2>
+            
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
