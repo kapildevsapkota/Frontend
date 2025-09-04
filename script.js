@@ -4,23 +4,18 @@ function closeAnnouncement() {
   const mobileMenu = document.getElementById("mobile-menu")
   const mainContent = document.querySelector(".main-content")
 
-  // Hide the announcement bar
   announcementBar.classList.add("hidden")
 
-  // Move navbar to top
   navbar.classList.add("announcement-closed")
 
-  // Adjust mobile menu position
   if (mobileMenu) {
     mobileMenu.classList.add("announcement-closed")
   }
 
-  // Adjust main content margin
   if (mainContent) {
     mainContent.classList.add("announcement-closed")
   }
 
-  // Remove the announcement bar from DOM after animation
   setTimeout(() => {
     announcementBar.style.display = "none"
   }, 300)
@@ -34,8 +29,6 @@ function showSubmenuHeader(submenuName) {
   if (logo && submenuHeader && submenuTitle) {
     logo.style.display = "none"
     submenuHeader.style.display = "flex"
-
-    // Set the title based on submenu name
     const titles = {
       mealtime: "Shop Mealtime",
       playtime: "Shop Playtime",
@@ -56,15 +49,11 @@ function hideSubmenuHeader() {
   }
 }
 
-// Optional: Add smooth scrolling behavior
 document.addEventListener("DOMContentLoaded", () => {
-  // Close announcement bar functionality
   const closeBtn = document.getElementById("close-announcement")
   if (closeBtn) {
     closeBtn.addEventListener("click", closeAnnouncement)
   }
-
-  // Mobile hamburger menu functionality
   const hamburger = document.getElementById("hamburger")
   const mobileMenu = document.getElementById("mobile-menu")
   if (hamburger) {
@@ -90,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Handle mobile submenu back buttons
   const mobileBackBtns = document.querySelectorAll(".mobile-back-btn")
   mobileBackBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -99,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Handle mobile submenu close buttons
   const mobileCloseBtns = document.querySelectorAll(".mobile-close-btn")
   mobileCloseBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -107,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Add event listeners for inline header buttons
   const inlineBackBtn = document.querySelector(".mobile-submenu-header-inline .mobile-back-btn")
   const inlineCloseBtn = document.querySelector(".mobile-submenu-header-inline .mobile-close-btn")
 
@@ -123,8 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
       closeMobileMenu()
     })
   }
-
-  // Close mobile menu when clicking outside
   document.addEventListener("click", (event) => {
     const hamburger = document.getElementById("hamburger")
     const mobileMenu = document.getElementById("mobile-menu")
@@ -141,7 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
-  // Handle window resize to close mobile menu on desktop
   window.addEventListener("resize", () => {
     if (window.innerWidth > 768) {
       const hamburger = document.getElementById("hamburger")
@@ -165,7 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const megaMenuItems = document.querySelectorAll(".has-megamenu")
   let hoverTimeout
 
-  // Function to hide all mega menus
   function hideAllMegaMenus() {
     megaMenuItems.forEach((item) => {
       const megamenu = item.querySelector(".megamenu")
@@ -183,7 +165,6 @@ document.addEventListener("DOMContentLoaded", () => {
     item.addEventListener("mouseenter", () => {
       clearTimeout(hoverTimeout)
       hideAllMegaMenus()
-      // Then show the current one
       setTimeout(() => {
         megamenu.style.opacity = "1"
         megamenu.style.visibility = "visible"
@@ -199,7 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 100)
     })
 
-    // Keep megamenu open when hovering over it
     megamenu.addEventListener("mouseenter", () => {
       clearTimeout(hoverTimeout)
     })
@@ -220,18 +200,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
-  // Age year tab functionality
   const ageYears = document.querySelectorAll(".age-year")
   ageYears.forEach((year) => {
     year.addEventListener("click", () => {
-      // Remove active class from all years
       ageYears.forEach((y) => y.classList.remove("active"))
-      // Add active class to clicked year
+
       year.classList.add("active")
     })
   })
 
-  // Initialize slider accordion
+
   new SliderAccordion()
 
   console.log("Responsive navigation with mega menus and slider accordion loaded successfully")
@@ -245,7 +223,6 @@ function toggleMobileMenu() {
   hamburger.classList.toggle("active")
   mobileMenu.classList.toggle("active")
 
-  // Prevent body scroll when mobile menu is open
   if (mobileMenu.classList.contains("active")) {
     body.style.overflow = "hidden"
     showMobileMain()
@@ -414,10 +391,9 @@ class SliderAccordion {
   }
 
   showSlide(index) {
-    // Hide all slides
+
     this.slides.forEach((slide) => {
       slide.classList.remove("active")
-      // Pause videos when not active
       const video = slide.querySelector("video")
       const iframe = slide.querySelector("iframe")
 
@@ -427,7 +403,6 @@ class SliderAccordion {
       }
 
       if (iframe) {
-        // For Vimeo, we'll handle autoplay through URL parameters
         const src = iframe.src
         if (src.includes("autoplay=1")) {
           iframe.src = src.replace("autoplay=1", "autoplay=0")
@@ -435,17 +410,15 @@ class SliderAccordion {
       }
     })
 
-    // Show current slide
     const currentSlideElement = this.slides[index]
     currentSlideElement.classList.add("active")
 
-    // Handle video/iframe autoplay for active slide
     const video = currentSlideElement.querySelector("video")
     const iframe = currentSlideElement.querySelector("iframe")
 
     if (video && this.isVisible) {
       video.currentTime = 0
-      video.muted = false // Unmute for active video
+      video.muted = false 
       video.play().catch((e) => {
         console.log("Video autoplay failed:", e)
         video.muted = true
@@ -454,7 +427,6 @@ class SliderAccordion {
     }
 
     if (iframe && this.isVisible) {
-      // Restart Vimeo video with autoplay
       const src = iframe.src
       if (src.includes("autoplay=0")) {
         iframe.src = src.replace("autoplay=0", "autoplay=1")
@@ -467,24 +439,18 @@ class SliderAccordion {
   }
 
   showAccordion(index) {
-    // Close all accordions
     this.accordionItems.forEach((item) => {
       item.classList.remove("active")
     })
-
-    // Open current accordion
     this.accordionItems[index].classList.add("active")
   }
 
   handleAccordionClick(index) {
-    // Toggle accordion
     const isCurrentlyActive = this.accordionItems[index].classList.contains("active")
 
     if (isCurrentlyActive) {
-      // If clicking on active accordion, close it
       this.accordionItems[index].classList.remove("active")
     } else {
-      // Show corresponding slide and accordion
       this.showSlide(index)
       this.showAccordion(index)
 

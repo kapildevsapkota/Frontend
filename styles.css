@@ -293,13 +293,15 @@ body {
 }
 
 .submenu-list a:hover {
-  color: #2c3e50;
+  color: #2f57a7;
 }
 
 .submenu-list .view-all {
   color: #2c3e50;
   font-weight: 500;
   text-decoration: underline;
+  font-style: italic;
+  
   margin-top: 12px;
 }
 
@@ -308,8 +310,16 @@ body {
   margin-left: 100px;
 }
 
+.pro-name{
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 400;
+  color: #2c3e50;
+}
+
 .products-header {
   display: flex;
+  font-style: italic;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
@@ -379,7 +389,6 @@ body {
   flex: 0 0 200px;
   background-color: #f2f2f2;
   padding: 20px;
-  text-align: center;
   position: relative;
   transition: transform 0.2s ease;
 }
@@ -514,8 +523,8 @@ body {
 }
 
 .shop-all-link {
-  color: #666;
-  text-decoration: none;
+  color: #2f57a7;
+  
   font-size: 14px;
   font-weight: 500;
   flex-shrink: 0;
@@ -700,6 +709,8 @@ body {
   color: #2c3e50 !important;
   font-weight: 500;
   text-decoration: underline !important;
+  font-style: italic;
+  
 }
 
 /* Mobile Featured Section Styles - Fixed carousel width and overflow */
